@@ -8,4 +8,5 @@ Hotel.belongsTo(Place);
 Activity.belongsTo(Place);
 Restaurant.belongsTo(Place);
 
-module.exports = db;
+module.exports =db
+

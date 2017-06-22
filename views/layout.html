@@ -1,9 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Trip Planner</title>
-</head>
-<body>
-  {% block content %}{% endblock %}
-</body>
+<html>
+  <title>Trip Planner - {% block title %}{% endblock %}</title>
+  <head>
+    <!-- Stylesheets go here! -->
+
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/stylesheets/firstyo.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+    {% block content %}
+    {% endblock %}
+
+    <!-- Script tags go here! -->
+    <script src='bootstrap/javascript/bootstrap.min.js'> </script>
+    <script src='jquery/jquery.min.js'></script>
+
+  </body>
 </html>
