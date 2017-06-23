@@ -25,7 +25,7 @@ div.gray-back {
    font-size: 14px;
    height: 29px;
    padding: 5px; /* If you add too much padding here, the options won't show in IE */
-   width: 268px;
+   width: 20%;
 }
 
 select {
@@ -46,4 +46,24 @@ select {
 
 li {
   display: inline;
+}
+
+#map{
+  height:80vh;
+}
+.rContainer {
+  height: 500px;
+}
+.rContainer2 {
+  height: 40px;
+  background-color: gray;
+}
+
+html, body{
+  height:100%;
+  margin: 0;
+  padding: 0;
+}
+nav.navbar{
+  margin:0
 }

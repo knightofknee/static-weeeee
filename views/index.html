@@ -1,13 +1,10 @@
-{% extends "layout.html" %}
-
-{% block title %}Start your Trip! :){% endblock %}
-
-{% block content %}
+{% extends "layout.html" %} {% block title %}Start your Trip! :){% endblock %} {% block content %}
 
 <nav class='navbar navbar-default'>
   <div class='container-fluid'>
     <div class='navbar-header'>
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+        aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -27,76 +24,92 @@
 <div>
   <div class='container-fluid'>
     <div class='row'>
-      <div class='col-lg-9 gray-back'>
-          <span>Hotels:</span>
-            <div class='styled-select blue semi-square'>
-              <select>
+      <div class='rContainer2'>
+
+      <div class='col-lg-9 gray-back col-md-9 col-sm-9'>
+        <span>Hotels:</span>
+        <div class='styled-select blue semi-square'>
+          <select>
                 {% for hotel in hotels %}
                 <option value="{{hotel.name}}">{{hotel.name}}</option>
                 {% endfor %}
               </select>
-            </div>
+        </div>
 
-            <span>Restaurants:</span>
+        <span>Restaurants:</span>
 
-            <div class='styled-select blue semi-square'>
-              <select>
+        <div class='styled-select blue semi-square'>
+          <select>
                 {% for restaurant in restaurants %}
                 <option value="{{restaurant.name}}">{{restaurant.name}}</option>
                 {% endfor %}
               </select>
-            </div>
+        </div>
 
-            <span>Activities:</span>
+        <span>Activities:</span>
 
-            <div class='styled-select blue semi-square'>
-              <select>
+        <div class='styled-select blue semi-square'>
+          <select>
                 {% for activity in activities %}
                 <option value="{{activity.name}}">{{activity.name}}</option>
                 {% endfor %}
               </select>
-            </div>
+        </div>
       </div>
 
-      <div class='itinerary col-lg-3 blue'>
-        <h3>Current Itinerary</h3>
-        <div id='day-btns row'>
-          <div class='col-lg-2'>
-          <p>Day:</p>
-          </div>
-          <div class='btn-group col-lg-10' id='button-group'>
-              <button class='btn btn-default'>1</button>
-              <button class='btn btn-default'>2</button>
-              <button class='btn btn-default'>3</button>
-              <button class='btn btn-default'>+</button>
-          </div>
+      <div class='itinerary col-lg-3 blue col-md-3 col-sm-3' style="height:100%">
+        <h5 style="height: 100%">Current Itinerary</h5>
+      </div>
+      </div>
 
+      <div class='rContainer'>
+        <div id='map' class='col-lg-9 col-md-9 col-sm-9'>
+        </div>
+        <div class='col-lg-3 col-md-3 col-sm-3'>
+          <div id='wrapper-for-side-panel' style="padding:10px">
+            <div class='panel panel-default' style="padding:10px">
+
+              <div id='day-btns row'>
+                <div class='col-lg-2'>
+                  <p>Day:</p>
+                </div>
+                <div class='btn-group col-lg-10' id='button-group'>
+                  <button class='btn btn-default'>1</button>
+                  <button class='btn btn-default'>2</button>
+                  <button class='btn btn-default'>3</button>
+                  <button class='btn btn-default'>+</button>
+                </div>
+
+              </div>
+
+              <p>Hotel:</p>
+              <ul>
+                <li>Placeholder </li><span><button class='btn btn-default'>X</button></span>
+              </ul>
+              <p>Restaurants:</p>
+              <ul>
+                <li>Placeholder </li><span><button class='btn btn-default'>X</button></span>
+              </ul>
+              <p>Activities:</p>
+              <ul>
+                <li>Placeholder </li><span><button class='btn btn-default'>X</button></span>
+              </ul>
+
+            </div>
+          </div>
         </div>
 
-        <p>Hotel:</p>
-          <ul>
-            <li>Placeholder</li><span><button class='btn btn-default'>X</button></span>
-          </ul>
-        <p>Restaurants:</p>
-          <ul>
-            <li>Placeholder</li><span><button class='btn btn-default'>X</button></span>
-          </ul>
-        <p>Activities:</p>
-          <ul>
-            <li>Placeholder</li><span><button class='btn btn-default'>X</button></span>
-          </ul>
+
 
       </div>
-
     </div>
   </div>
-</div>
+
 
 
 
   <h1>{{message}}</h1>
 
-{% endblock %}
+  {% endblock %}
 
-<!--@@@@@@@@@@@######################################%%%%%%%%%%%%%%%-->
-
+  <!--@@@@@@@@@@@######################################%%%%%%%%%%%%%%%-->
