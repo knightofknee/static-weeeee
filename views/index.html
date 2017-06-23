@@ -4,27 +4,95 @@
 
 {% block content %}
 
-<div id="app" class="clearfix">
-  <p>#-@</p>
+<nav class='navbar navbar-default'>
+  <div class='container-fluid'>
+    <div class='navbar-header'>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class='navbar-brand' href='/'>Trip Planner</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </div>
+  </div>
+</nav>
+
+<div>
+  <div class='container-fluid'>
+    <div class='row'>
+      <div class='col-lg-9 gray-back'>
+          <span>Hotels:</span>
+            <div class='styled-select blue semi-square'>
+              <select>
+                {% for hotel in hotels %}
+                <option value="{{hotel.name}}">{{hotel.name}}</option>
+                {% endfor %}
+              </select>
+            </div>
+
+            <span>Restaurants:</span>
+
+            <div class='styled-select blue semi-square'>
+              <select>
+                {% for restaurant in restaurants %}
+                <option value="{{restaurant.name}}">{{restaurant.name}}</option>
+                {% endfor %}
+              </select>
+            </div>
+
+            <span>Activities:</span>
+
+            <div class='styled-select blue semi-square'>
+              <select>
+                {% for activity in activities %}
+                <option value="{{activity.name}}">{{activity.name}}</option>
+                {% endfor %}
+              </select>
+            </div>
+      </div>
+
+      <div class='itinerary col-lg-3 blue'>
+        <h3>Current Itinerary</h3>
+        <div id='day-btns row'>
+          <div class='col-lg-2'>
+          <p>Day:</p>
+          </div>
+          <div class='btn-group col-lg-10' id='button-group'>
+              <button class='btn btn-default'>1</button>
+              <button class='btn btn-default'>2</button>
+              <button class='btn btn-default'>3</button>
+              <button class='btn btn-default'>+</button>
+          </div>
+
+        </div>
+
+        <p>Hotel:</p>
+          <ul>
+            <li>Placeholder</li><span><button class='btn btn-default'>X</button></span>
+          </ul>
+        <p>Restaurants:</p>
+          <ul>
+            <li>Placeholder</li><span><button class='btn btn-default'>X</button></span>
+          </ul>
+        <p>Activities:</p>
+          <ul>
+            <li>Placeholder</li><span><button class='btn btn-default'>X</button></span>
+          </ul>
+
+      </div>
+
+    </div>
+  </div>
 </div>
 
-<select>
-  {% for hotel in hotels %}
-  <option value="{{hotel.name}}">{{hotel.name}}</option>
-  {% endfor %}
-</select>
 
-<select>
-  {% for restaurant in restaurants %}
-  <option value="{{restaurant.name}}">{{restaurant.name}}</option>
-  {% endfor %}
-</select>
-
-<select>
-  {% for activity in activities %}
-  <option value="{{activity.name}}">{{activity.name}}</option>
-  {% endfor %}
-</select>
 
   <h1>{{message}}</h1>
 
